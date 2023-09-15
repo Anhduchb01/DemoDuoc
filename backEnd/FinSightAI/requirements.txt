@@ -1,0 +1,17 @@
+flask
+flask_cors
+apscheduler
+scrapy
+crochet
+pymongo
+numpy
+nltk==3.6.1
+python-dotenv
+python-slugify
+sentence-transformers==1.1.0
+transformers
+pandas
+spacy
+datasets
+evaluate
+underthesea

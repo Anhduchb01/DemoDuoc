@@ -1,0 +1,17 @@
+/*
+	===============================
+			@Import	Function
+	===============================
+*/
+/*
+	===============================
+			@Import	Mixins
+	===============================
+*/
+body.dark .widget-content .row.padding35 .col-md-4 {
+	margin-bottom: 20px;
+}
+body.dark .btn {
+	margin-right: 5px;
+}
+

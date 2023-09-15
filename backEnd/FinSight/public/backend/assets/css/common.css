@@ -1,0 +1,34 @@
+/* BG-color Badges  */
+
+.color-badge-success {
+  background-color: #ddf5f0;
+  color: #1abc9c;
+}
+
+.color-badge-danger {
+  color: #e7515a;
+  background-color: #fff5f5;
+}
+.color-badge-warning {
+  color: #e2a03f;
+  background-color: #fff9ed;
+}
+
+.color-badge-primary {
+  color: #4361ee;
+  background: #eaf1ff;
+}
+
+.color-badge-info {
+  background-color: #e7f7ff;
+  color: #2196f3;
+}
+.color-badge-dark {
+  color: #515365;
+  background-color: #ebedf2;
+}
+
+.color-badge-secondary {
+  background-color: #f3effc;
+  color: #805dca;
+}

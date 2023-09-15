@@ -1,0 +1,22 @@
+.crawler-component .item-content .dropdown.show {z-index: 1;}
+.crawler-component .grid .user-email,.grid .user-email.action,.grid .action-btn {width: auto;}
+.crawler-component .grid .user-email.address-page {display: block !important;}
+.crawler-component .user-email {width: 20%;text-align: center;}
+.crawler-component .action-btn {width: 20%;text-align: center;}
+.crawler-component .user-email h4 {margin-left: 0px !important;}
+.crawler-component .checkbox-rss-page {width: 13px;height: 13px;}
+.crawler-component .cursorPointer {cursor: pointer;}
+.crawler-component .input-group-text {width: 162px;}
+.crawler-component .table-http-header .row-key,.table-http-header .row-value {height: 30px;}
+.crawler-component .table-http-header td {padding-top: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}
+.crawler-component .remove-row-table-header:hover {cursor: pointer;}
+.crawler-component .modal-content .modal-footer button.btn[data-dismiss="modal"],.modal-content .modal-footer [data-dismiss="modal"] {border: 0px;}
+.crawler-component .nav-link.mb-2.active {color: white !important;}
+.crawler-component .table-list-key td input {height: auto;box-shadow: none !important;border: 0px;border-radius: 0px;}
+.crawler-component .table-list-key td {padding: 0px !important;}
+.crawler-component .user-email .box-status-post {width: 35%;margin: auto;}
+.crawler-component .user-email .box-status-post .item-timeline {padding: 0px;cursor: default;margin-bottom: 11px}
+.crawler-component .user-email .box-status-post .item-timeline .t-dot {padding: 0px;cursor: default;padding-left: 20px !important;}
+.crawler-component .user-email .box-status-post .item-timeline .t-text {display: block;margin-left: 5px;width: auto;}
+.crawler-component .searchable-container .searchable-items.grid .items .user-email .box-status-post {margin: 0;width: auto;}
+.crawler-component .box-status-post .t-text {white-space: nowrap}

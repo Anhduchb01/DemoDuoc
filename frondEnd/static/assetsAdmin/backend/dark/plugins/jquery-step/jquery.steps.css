@@ -1,0 +1,751 @@
+/* =============================== @Import Function =============================== */
+/* =============================== @Import Mixins =============================== */
+/* Common */
+
+ body.dark .wizard, body.dark .tabcontrol {
+	 display: block;
+	 width: 100%;
+	 overflow: hidden;
+}
+ body.dark .wizard a, body.dark .tabcontrol a {
+	 outline: 0;
+}
+ body.dark .wizard ul, body.dark .tabcontrol ul {
+	 list-style: none !important;
+	 padding: 0;
+	 margin: 0;
+}
+ body.dark .wizard ul > li, body.dark .tabcontrol ul > li {
+	 display: block;
+	 padding: 0;
+}
+ body.dark .wizard > .steps .current-info, body.dark .tabcontrol > .steps .current-info, body.dark .wizard > .content > .title, body.dark .tabcontrol > .content > .title {
+	 position: absolute;
+	 left: -999em;
+}
+ body.dark .wizard > .steps {
+	 position: relative;
+	 display: block;
+	 width: 100%;
+}
+ body.dark .wizard.vertical > .steps {
+	 display: inline;
+	 float: left;
+	 width: 30%;
+}
+ body.dark .wizard.vertical > .steps > ul > li {
+	 float: none;
+	 width: 100%;
+}
+ body.dark .wizard.vertical > .content {
+	 display: inline;
+	 float: left;
+	 margin: 0 2.5% 0.5em 2.5%;
+	 width: 65%;
+}
+ body.dark .wizard.vertical > .actions {
+	 -ms-flex: 0 0 100%;
+	 flex: 0 0 100%;
+	 max-width: 100%;
+}
+ body.dark .wizard.vertical > .actions > ul > li {
+	 margin: 0 0 0 1em;
+}
+ body.dark .wizard > .steps .number {
+	 font-size: 1.429em;
+}
+ body.dark .wizard > .steps > ul > li {
+	 float: left;
+}
+ body.dark .wizard > .actions > ul > li {
+	 float: left;
+}
+ body.dark .wizard > .steps a {
+	 display: block;
+	 width: auto;
+	 padding: 10px;
+	 text-decoration: none;
+	 -webkit-border-radius: 0;
+	 -moz-border-radius: 0;
+	 border-radius: 0;
+}
+ body.dark .wizard > .steps a:hover, body.dark .wizard > .steps a:active {
+	 display: block;
+	 width: auto;
+	 padding: 10px;
+	 text-decoration: none;
+	 -webkit-border-radius: 0;
+	 -moz-border-radius: 0;
+	 border-radius: 0;
+}
+ body.dark .wizard > .steps .disabled a {
+	 background: #ebedf2;
+	 color: #aaa;
+	 cursor: default;
+}
+ body.dark .wizard > .steps .disabled a:hover, body.dark .wizard > .steps .disabled a:active {
+	 background: #ebedf2;
+	 color: #aaa;
+	 cursor: default;
+}
+ body.dark .wizard > .steps .current a {
+	 background: #060818;
+	 color: #009688;
+	 cursor: default;
+	/* border-bottom: 2px solid $m-color_14;
+	*/
+}
+ body.dark .wizard > .steps .current a:hover, body.dark .wizard > .steps .current a:active {
+	 background: #060818;
+	 color: #009688;
+	 cursor: default;
+	/* border-bottom: 2px solid $m-color_14;
+	*/
+}
+ body.dark .wizard > .steps .done a {
+	 background: #3b3f5c;
+	 color: #fff;
+}
+ body.dark .wizard > .steps .done a:hover, body.dark .wizard > .steps .done a:active {
+	 background: #3b3f5c;
+	 color: #fff;
+}
+ body.dark .wizard > .steps .error a {
+	 background: #ff3111;
+	 color: #fff;
+}
+ body.dark .wizard > .steps .error a:hover, body.dark .wizard > .steps .error a:active {
+	 background: #ff3111;
+	 color: #fff;
+}
+ body.dark .wizard > .content {
+	 background: #0e1726;
+	 display: block;
+	 margin-top: 27px;
+	 min-height: 18em;
+	 overflow: hidden;
+	 position: relative;
+	 width: auto;
+	 -webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+	 border-radius: 5px;
+}
+ body.dark .wizard > .content section.body:not(.current) {
+	 display: none !important;
+}
+ body.dark .wizard > .content > .body {
+	 padding: 4.5%;
+}
+ body.dark .wizard > .content > .body ul {
+	 list-style: disc !important;
+}
+ body.dark .wizard > .content > .body ul > li {
+	 display: list-item;
+}
+ body.dark .wizard > .content > .body > iframe {
+	 border: 0 none;
+	 width: 100%;
+	 height: 100%;
+}
+ body.dark .wizard > .content > .body input {
+	 display: block;
+	 border: 1px solid #ccc;
+}
+ body.dark .wizard > .content > .body input[type="checkbox"] {
+	 display: inline-block;
+}
+ body.dark .wizard > .content > .body input.error {
+	 background: #fbe3e4;
+	 border: 1px solid #fbc2c4;
+	 color: #8a1f11;
+}
+ body.dark .wizard > .content > .body label.error {
+	 color: #8a1f11;
+	 display: inline-block;
+	 margin-left: 1.5em;
+}
+ body.dark .wizard > .actions {
+	 margin-top: 30px;
+	 margin-bottom: 24px;
+}
+ body.dark .wizard > .actions > ul {
+	 display: inline-block;
+	 text-align: right;
+}
+ body.dark .wizard > .actions > ul > li {
+	 margin: 0 0.5em;
+}
+ body.dark .wizard > .actions a {
+	 background-color: #515365;
+	 color: #fff;
+	 display: block;
+	 padding: 0.5em 1em;
+	 text-decoration: none;
+	 -webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+	 border-radius: 5px;
+}
+ body.dark .wizard > .actions a:hover, body.dark .wizard > .actions a:active {
+	 background-color: #515365;
+	 color: #fff;
+	 display: block;
+	 padding: 0.5em 1em;
+	 text-decoration: none;
+	 -webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+	 border-radius: 5px;
+}
+ body.dark .wizard > .actions .disabled a {
+	 background: #191e3a;
+	 color: #e0e6ed;
+}
+ body.dark .wizard > .actions .disabled a:hover, body.dark .wizard > .actions .disabled a:active {
+	 background: #191e3a;
+	 color: #e0e6ed;
+}
+ body.dark .tabcontrol > .steps {
+	 position: relative;
+	 display: block;
+	 width: 100%;
+}
+ body.dark .tabcontrol > .steps > ul {
+	 position: relative;
+	 margin: 6px 0 0 0;
+	 top: 1px;
+	 z-index: 1;
+}
+ body.dark .tabcontrol > .steps > ul > li {
+	 float: left;
+	 margin: 5px 2px 0 0;
+	 padding: 1px;
+	 -webkit-border-top-left-radius: 5px;
+	 -webkit-border-top-right-radius: 5px;
+	 -moz-border-radius-topleft: 5px;
+	 -moz-border-radius-topright: 5px;
+	 border-top-left-radius: 5px;
+	 border-top-right-radius: 5px;
+}
+ body.dark .tabcontrol > .steps > ul > li:hover {
+	 background: #edecec;
+	 border: 1px solid #bbb;
+	 padding: 0;
+}
+ body.dark .tabcontrol > .steps > ul > li.current {
+	 background: #fff;
+	 border: 1px solid #bbb;
+	 border-bottom: 0 none;
+	 padding: 0 0 1px 0;
+	 margin-top: 0;
+}
+ body.dark .tabcontrol > .steps > ul > li.current > a {
+	 padding: 15px 30px 10px 30px;
+}
+ body.dark .tabcontrol > .steps > ul > li > a {
+	 color: #5f5f5f;
+	 display: inline-block;
+	 border: 0 none;
+	 margin: 0;
+	 padding: 10px 30px;
+	 text-decoration: none;
+}
+ body.dark .tabcontrol > .steps > ul > li > a:hover {
+	 text-decoration: none;
+}
+ body.dark .tabcontrol > .content {
+	 position: relative;
+	 display: inline-block;
+	 width: 100%;
+	 height: 35em;
+	 overflow: hidden;
+	 border-top: 1px solid #bbb;
+	 padding-top: 20px;
+}
+ body.dark .tabcontrol > .content > .body {
+	 float: left;
+	 position: absolute;
+	 width: 95%;
+	 height: 95%;
+	 padding: 2.5%;
+}
+ body.dark .tabcontrol > .content > .body ul {
+	 list-style: disc !important;
+}
+ body.dark .tabcontrol > .content > .body ul > li {
+	 display: list-item;
+}
+ body.dark .wizard.vertical > .steps a {
+	 margin-bottom: 5px;
+}
+ body.dark .wizard.vertical > .steps a:hover, body.dark .wizard.vertical > .steps a:active {
+	 margin-bottom: 5px;
+}
+ body.dark .wizard > .steps .disabled a {
+	 background-color: transparent;
+	 color: #888ea8;
+}
+ body.dark .wizard > .steps .disabled a:hover, body.dark .wizard > .steps .disabled a:active {
+	 background-color: transparent;
+	 color: #888ea8;
+}
+ body.dark .wizard > .steps a {
+	 -webkit-border-radius: 0;
+	 -moz-border-radius: 0;
+	 border-radius: 0;
+}
+ body.dark .wizard > .steps a:hover, body.dark .wizard > .steps a:active {
+	 -webkit-border-radius: 0;
+	 -moz-border-radius: 0;
+	 border-radius: 0;
+}
+ body.dark .wizard > .steps .current a .number, body.dark .wizard > .steps .current a:hover .number, body.dark .wizard > .steps .current a:active .number {
+	 border-color: #fff;
+}
+ body.dark .wizard > .steps .done a .number, body.dark .wizard > .steps .done a:hover .number, body.dark .wizard > .steps .done a:active .number, body.dark .wizard > .steps .done a .number, body.dark .wizard > .steps .done a:hover .number, body.dark .wizard > .steps .done a:active .number {
+	 border-color: #fff;
+}
+ body.dark .wizard > .steps .last.current.done a {
+	 background: #009688;
+	 color: #fff;
+}
+ body.dark .wizard > .steps .last.current.done a:hover, body.dark .wizard > .steps .last.current.done a:active {
+	 background: #009688;
+	 color: #fff;
+}
+ body.dark .wizard > .actions > ul > li {
+	 margin: 0;
+}
+ body.dark .wizard > .steps .done a {
+	 border-bottom: 3px solid #888ea8;
+}
+ body.dark .wizard > .steps .done a:hover, body.dark .wizard > .steps .done a:active {
+	 border-bottom: 3px solid #888ea8;
+}
+ body.dark .wizard > .steps .number {
+	 font-size: 15px;
+	 padding: 2px 5px;
+	 border: 1px solid #fff;
+	 border-radius: 20px;
+}
+ body.dark .circle.wizard ul, body.dark .circle.wizard.tabcontrol ul {
+	 display: flex;
+	 justify-content: space-around;
+}
+ body.dark .circle.wizard .actions ul {
+	 justify-content: space-between;
+}
+ body.dark .circle.wizard > .steps > ul > li {
+	 float: none;
+	 width: 100%;
+	 text-align: center;
+	 position: relative;
+}
+ body.dark .circle.wizard > .steps .number {
+	 font-size: 15px;
+	 border: 2px solid #000;
+	 border-radius: 53px;
+	 display: block;
+	 font-size: 14px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 50px;
+	 height: 50px;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ body.dark .circle.wizard > .steps .current a {
+	 background: transparent;
+	 color: #bfc9d4;
+	 cursor: default;
+	 text-align: center;
+}
+ body.dark .circle.wizard > .steps .current a:hover, body.dark .circle.wizard > .steps .current a:active {
+	 background: transparent;
+	 color: #bfc9d4;
+	 cursor: default;
+	 text-align: center;
+}
+ body.dark .circle.wizard > .steps ul li::after, body.dark .circle.wizard > .steps ul li::before {
+	 content: '';
+	 z-index: 9;
+	 display: block;
+	 position: absolute;
+	 top: 35px;
+	 width: 235%;
+	 height: 3px;
+	 right: 0;
+	 left: 0;
+	 margin-left: auto;
+	 margin-right: auto;
+	 background-color: #1b2e4b;
+}
+ body.dark .circle.wizard > .content {
+	 margin-top: 0;
+}
+ body.dark .circle.wizard > .steps a .number, body.dark .circle.wizard > .steps a:hover .number, body.dark .circle.wizard > .steps a:active .number {
+	 border-color: #ebedf2;
+	 background-color: #fff;
+	 position: relative;
+	 z-index: 10;
+	 text-align: center;
+}
+ body.dark .circle.wizard > .steps .disabled a .number, body.dark .circle.wizard > .steps .disabled a:hover .number, body.dark .circle.wizard > .steps .disabled a:active .number {
+	 border-color: #191e3a;
+	 background-color: #191e3a;
+	 color: #e0e6ed;
+}
+ body.dark .circle.wizard > .steps .current:not(.done) a .number, body.dark .circle.wizard > .steps .current:not(.done) a:hover .number, body.dark .circle.wizard > .steps .current:not(.done) a:active .number {
+	 border-color: #009688;
+	 background: #060818;
+	 color: #009688;
+}
+ body.dark .circle.wizard > .steps .done a {
+	 border: none;
+	 background-color: transparent;
+	 color: #009688;
+	 font-weight: 600;
+}
+ body.dark .circle.wizard > .steps .done a:hover, body.dark .circle.wizard > .steps .done a:active {
+	 border: none;
+	 background-color: transparent;
+	 color: #009688;
+	 font-weight: 600;
+}
+ body.dark .circle.wizard > .steps .done a .number {
+	 border-color: #191e3a;
+	 color: #009688;
+	 background-color: #191e3a;
+}
+ body.dark .circle.wizard > .steps ul li.done::after, body.dark .circle.wizard > .steps ul li.done::before {
+	 background-color: #060818;
+}
+ body.dark .circle.wizard > .steps .last.current.done a {
+	 border: none;
+	 background-color: transparent;
+	 color: #009688;
+}
+ body.dark .circle.wizard > .steps .last.current.done a:hover, body.dark .circle.wizard > .steps .last.current.done a:active {
+	 border: none;
+	 background-color: transparent;
+	 color: #009688;
+}
+ body.dark .wizard > .steps .done a, body.dark .classic.wizard > .steps .current a, body.dark .wizard > .steps .disabled a {
+	 cursor: pointer !important;
+}
+ body.dark .pill.wizard ul, body.dark .pill.wizard.tabcontrol ul {
+	 display: flex;
+	 justify-content: space-around;
+}
+ body.dark .pill.wizard .actions ul {
+	 justify-content: space-between;
+}
+ body.dark .pill.wizard > .steps > ul > li {
+	 float: none;
+	 width: 100%;
+	 text-align: center;
+	 position: relative;
+}
+ body.dark .pill.wizard > .steps a i {
+	 display: block;
+	 font-size: 24px;
+}
+ body.dark .pill.wizard > .steps li.disabled {
+	 opacity: 0.5;
+}
+ body.dark .pill.wizard > .steps .disabled a {
+	 background-color: #191e3a;
+	 color: #fafafa;
+	 border: solid 1px #191e3a;
+}
+ body.dark .pill.wizard > .steps .disabled a:hover, body.dark .pill.wizard > .steps .disabled a:active {
+	 background-color: #191e3a;
+	 color: #fafafa;
+	 border: solid 1px #191e3a;
+}
+ body.dark .pill.wizard > .steps a {
+	 border-bottom: 2px solid #060818;
+	 font-size: 15px;
+	 font-weight: 600;
+	 margin-right: 6px;
+	 border-radius: 20px;
+}
+ body.dark .pill.wizard > .steps a:hover, body.dark .pill.wizard > .steps a:active {
+	 border-bottom: 2px solid #060818;
+	 font-size: 15px;
+	 font-weight: 600;
+	 margin-right: 6px;
+	 border-radius: 20px;
+}
+ body.dark .pill.wizard > .content {
+	 margin-top: 0;
+	 background: transparent;
+}
+ body.dark .pill.wizard > .steps a .number, body.dark .pill.wizard > .steps a:hover .number, body.dark .pill.wizard > .steps a:active .number {
+	 border: none;
+}
+ body.dark .pill.wizard > .steps .done a {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark .pill.wizard > .steps .done a:hover, body.dark .pill.wizard > .steps .done a:active {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark .pill.wizard > .steps .done a .number {
+	 border-color: #009688;
+}
+ body.dark .pill.wizard > .steps ul li.done:not(.last)::after, body.dark .pill.wizard > .steps ul li.done:not(.last)::before {
+	 background-color: #009688;
+}
+ body.dark .pill.wizard > .steps .last.current.done a {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark .pill.wizard > .steps .last.current.done a:hover, body.dark .pill.wizard > .steps .last.current.done a:active {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark .circle.vertical.wizard {
+	 display: flex;
+	 display: -ms-flexbox;
+	 display: flex;
+	 -ms-flex-wrap: wrap;
+	 flex-wrap: wrap;
+}
+ body.dark .circle.vertical.wizard > .steps {
+	 -ms-flex: 0 0 30%;
+	 flex: 0 0 30%;
+	 max-width: 30%;
+}
+ body.dark .circle.vertical.wizard ul, body.dark .circle.vertical.wizard.tabcontrol ul {
+	 display: block;
+}
+ body.dark .circle.vertical.wizard .actions ul {
+	 justify-content: space-between;
+	 display: flex;
+}
+ body.dark .circle.vertical.wizard > .steps > ul > li {
+	 float: none;
+	 width: 100%;
+	 text-align: center;
+	 position: relative;
+	 padding-top: 26px;
+	 padding-bottom: 10px;
+}
+ body.dark .circle.vertical.wizard > .steps .number {
+	 font-size: 15px;
+	 border: 2px solid #000;
+	 border-radius: 53px;
+	 display: block;
+	 font-size: 14px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 50px;
+	 height: 50px;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ body.dark .circle.vertical.wizard > .steps .current a {
+	 background: transparent;
+	 color: #3b3f5c;
+	 cursor: default;
+	 text-align: center;
+}
+ body.dark .circle.vertical.wizard > .steps .current a:hover, body.dark .circle.vertical.wizard > .steps .current a:active {
+	 background: transparent;
+	 color: #3b3f5c;
+	 cursor: default;
+	 text-align: center;
+}
+ body.dark .circle.vertical.wizard > .steps ul li::after, body.dark .circle.vertical.wizard > .steps ul li::before {
+	 content: '';
+	 z-index: 9;
+	 display: block;
+	 position: absolute;
+	 top: 0;
+	 width: 3px;
+	 height: 110%;
+	 right: 0;
+	 left: 0;
+	 margin-left: auto;
+	 margin-right: auto;
+	 background-color: #1b2e4b;
+}
+ body.dark .circle.vertical.wizard > .content {
+	 -ms-flex: 0 0 50%;
+	 flex: 0 0 70%;
+	 max-width: 70%;
+	 margin: 0;
+}
+ body.dark .circle.vertical.wizard > .steps a .number, body.dark .circle.vertical.wizard > .steps a:hover .number, body.dark .circle.vertical.wizard > .steps a:active .number {
+	 border-color: #3b3f5c;
+	 background-color: #009688;
+	 font-weight: 700;
+	 position: relative;
+	 z-index: 10;
+	 text-align: center;
+}
+ body.dark .circle.vertical.wizard > .steps .disabled a .number, body.dark .circle.vertical.wizard > .steps .disabled a:hover .number, body.dark .circle.vertical.wizard > .steps .disabled a:active .number {
+	 border-color: #191e3a;
+	 background-color: #191e3a;
+	 color: #e0e6ed;
+}
+ body.dark .circle.vertical.wizard > .steps .done a {
+	 border: none;
+	 background-color: transparent;
+	 color: #3b3f5c;
+}
+ body.dark .circle.vertical.wizard > .steps .done a:hover, body.dark .circle.vertical.wizard > .steps .done a:active {
+	 border: none;
+	 background-color: transparent;
+	 color: #3b3f5c;
+}
+ body.dark .circle.vertical.wizard > .steps .done a .number {
+	 border-color: #191e3a;
+	 color: #009688;
+	 background-color: #191e3a;
+}
+ body.dark .circle.vertical.wizard > .steps ul li.done::after, body.dark .circle.vertical.wizard > .steps ul li.done::before {
+	 background-color: #009688;
+}
+ body.dark .circle.vertical.wizard > .steps .last.current.done a {
+	 border: none;
+	 background-color: transparent;
+	 color: #3b3f5c;
+}
+ body.dark .circle.vertical.wizard > .steps .last.current.done a:hover, body.dark .circle.vertical.wizard > .steps .last.current.done a:active {
+	 border: none;
+	 background-color: transparent;
+	 color: #3b3f5c;
+}
+ body.dark .pills.vertical.wizard {
+	 display: flex;
+	 display: -ms-flexbox;
+	 display: flex;
+	 -ms-flex-wrap: wrap;
+	 flex-wrap: wrap;
+}
+ body.dark .pills.vertical.wizard > .steps {
+	 -ms-flex: 0 0 30%;
+	 flex: 0 0 30%;
+	 max-width: 30%;
+}
+ body.dark .pills.vertical.wizard ul, body.dark .pills.vertical.wizard.tabcontrol ul {
+	 display: flow-root;
+	 justify-content: space-around;
+}
+ body.dark .pills.vertical.wizard .actions ul {
+	 justify-content: space-between;
+	 display: flex;
+}
+ body.dark .pills.vertical.wizard > .steps > ul > li {
+	 float: none;
+	 width: 100%;
+	 text-align: center;
+	 position: relative;
+}
+ body.dark .pills.vertical.wizard > .steps .number {
+	 font-size: 15px;
+	 border: none;
+	 font-size: 14px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ body.dark .pills.vertical.wizard > .steps li.disabled {
+	 opacity: 0.5;
+}
+ body.dark .pills.vertical.wizard > .steps a {
+	 margin-right: 6px;
+	 border-radius: 20px;
+	 margin-bottom: 25px;
+}
+ body.dark .pills.vertical.wizard > .steps a:hover, body.dark .pills.vertical.wizard > .steps a:active {
+	 margin-right: 6px;
+	 border-radius: 20px;
+	 margin-bottom: 25px;
+}
+ body.dark .pills.vertical.wizard > .steps .disabled a {
+	 background-color: #191e3a;
+	 color: #e0e6ed;
+	 border: solid 1px #191e3a;
+}
+ body.dark .pills.vertical.wizard > .steps .disabled a:hover, body.dark .pills.vertical.wizard > .steps .disabled a:active {
+	 background-color: #191e3a;
+	 color: #e0e6ed;
+	 border: solid 1px #191e3a;
+}
+ body.dark .pills.vertical.wizard > .steps .current a {
+	 cursor: default;
+	 text-align: center;
+	 border-radius: 30px;
+	 margin-right: 5px;
+}
+ body.dark .pills.vertical.wizard > .steps .current a:hover, body.dark .pills.vertical.wizard > .steps .current a:active {
+	 cursor: default;
+	 text-align: center;
+	 border-radius: 30px;
+	 margin-right: 5px;
+}
+ body.dark .pills.vertical.wizard > .content {
+	 -ms-flex: 0 0 50%;
+	 flex: 0 0 70%;
+	 max-width: 70%;
+	 margin: 0;
+}
+ body.dark .pills.vertical.wizard > .steps .done a {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark .pills.vertical.wizard > .steps .done a:hover, body.dark .pills.vertical.wizard > .steps .done a:active {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark .pills.vertical.wizard > .steps .done a .number {
+	 border-color: #009688;
+}
+ body.dark .pills.vertical.wizard > .steps ul li.done:not(.last)::after, body.dark .pills.vertical.wizard > .steps ul li.done:not(.last)::before {
+	 background-color: #009688;
+}
+ body.dark .pills.vertical.wizard > .steps .last.current.done a {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark .pills.vertical.wizard > .steps .last.current.done a:hover, body.dark .pills.vertical.wizard > .steps .last.current.done a:active {
+	 border: 1px solid #191e3a;
+	 background-color: #191e3a;
+	 color: #009688;
+	 font-weight: 700;
+}
+ body.dark label.custom-control-label {
+	 margin-left: 30px;
+}
+ @media (max-width: 575px) {
+	 body.dark .pill.wizard ul[role="tablist"] {
+		 display: block;
+	}
+	 body.dark .pill.wizard ul[role="tablist"] li {
+		 margin-bottom: 2rem;
+	}
+	 body.dark .pills.vertical.wizard > .steps, body.dark .pills.vertical.wizard > .content {
+		 -ms-flex: 0 0 100%;
+		 flex: 0 0 100%;
+		 max-width: 100%;
+	}
+}
+ 

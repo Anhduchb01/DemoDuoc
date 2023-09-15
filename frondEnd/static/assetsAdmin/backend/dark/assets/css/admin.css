@@ -1,0 +1,79 @@
+
+ body.dark .see-more-notify {
+	 align-items: center;
+	 justify-content: center;
+	 padding: 2px;
+	 display: flex;
+	 border-top: 1px solid #191e3a;
+	 font-size: 13px;
+	 padding-top: 8px;
+	 font-weight: bold;
+}
+ body.dark .switch.s-outline-info {
+	 margin: 0px;
+	 vertical-align: middle;
+}
+ body.dark .title-address-page, body.dark .sub-title-address-page {
+	 color: #888ea8;
+	 margin: 0;
+}
+ body.dark .td-content.name-page {
+	 display: flex;
+	 flex-flow: column;
+}
+ body.dark td .td-content {
+	 cursor: default !important;
+}
+ body.dark .td-content.name-page a {
+	 color: #888ea8;
+}
+ body.dark tr:hover .td-content.name-page a {
+	 color: #b7c1cc;
+}
+ body.dark .title-page {
+	 font-size: 15px;
+}
+ body.dark .td-content.name-page span {
+	 padding-left: 15px;
+}
+ body.dark .box-switch {
+	 text-align: center;
+}
+ body.dark .box-switch {
+	 text-align: center;
+}
+ body.dark .data-log {
+	 display: flex;
+	 flex-flow: column;
+}
+ body.dark .checkbox-column.sorting_1 {
+	 padding-left: 15px !important;
+}
+ body.dark .td-content.text-left {
+	 margin: 0px !important;
+	 width: 100%;
+	 padding-left: 15px !important;
+}
+ body.dark .table-schedule td {
+	 padding-top: 2px !important;
+	 padding-bottom: 1px !important;
+}
+ body.dark .nav-link.sub-nav-link {
+	 white-space: nowrap;
+}
+ body.dark .table-responsive {
+	 overflow-x: hidden !important;
+}
+ body.dark .table-list-key th, body.dark .table-list-key td {
+	 border: 1px 1px 1px 1px;
+	 border: 1px solid #191e3a !important;
+}
+ body.dark .table-list-key td.box-remove-row {
+	 background: #1b2e4b;
+}
+ body.dark .chart-circle {
+	 border-bottom: 1px dashed #3b3f5c;
+	 padding: 20px 20px 20px 20px !important;
+	 margin: 0px !important;
+}
+ 

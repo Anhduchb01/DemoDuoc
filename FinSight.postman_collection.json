@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "4a3d08ec-f117-4852-bfc2-b813665f09de",
+		"name": "FinSight",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23234546"
+	},
+	"item": [
+		{
+			"name": "crawl/cafef",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number_page_query\": 2,\r\n    \"article_url_query\": \"div.tlitem.box-category-item  h3  a\",\r\n    \"title_query\":\"h1.title\",\r\n    \"timeCreatePostOrigin_query\": \"span.pdate\",\r\n    \"category_query\": \"a.category-page__name.cat\",\r\n    \"author_query\": \"p.author\",\r\n    \"content_title_query\": \"h2.sapo\",\r\n    \"content_des_query\": \"div.detail-content.afcbc-body p\",\r\n    \"content_html_title_query\":\"h2.sapo\",\r\n    \"content_html_des_query\":\"div.contentdetail\",\r\n    \"image_url_query\":\"div.media img\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/crawl/cafef",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"crawl",
+						"cafef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crawl/baodautu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number_page_query\": 2,\r\n    \"article_url_query\": \"div.tlitem.box-category-item  h3  a\",\r\n    \"title_query\":\"h1.title\",\r\n    \"timeCreatePostOrigin_query\": \"span.pdate\",\r\n    \"category_query\": \"a.category-page__name.cat\",\r\n    \"author_query\": \"p.author\",\r\n    \"content_title_query\": \"h2.sapo\",\r\n    \"content_des_query\": \"div.detail-content.afcbc-body p\",\r\n    \"content_html_title_query\":\"h2.sapo\",\r\n    \"content_html_des_query\":\"div.contentdetail\",\r\n    \"image_url_query\":\"div.media img\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/crawl/baodautu",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"crawl",
+						"baodautu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crawl/cafebiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number_page_query\": 2,\r\n    \"article_url_query\": \"a.cfbiznews_title.show-popup\",\r\n    \"title_query\":\"h1.title\",\r\n    \"timeCreatePostOrigin_query\": \"div.timeandcatdetail span.time\",\r\n    \"category_query\": \"div.timeandcatdetail a\",\r\n    \"author_query\": \"p.p-author strong\",\r\n    \"content_title_query\": \"div.detail-content p\",\r\n    \"content_des_query\": \"div.detail-content.afcbc-body p\",\r\n    \"content_html_title_query\":\"h2.sapo\",\r\n    \"content_html_des_query\":\"div.detail-content\",\r\n    \"image_url_query\":\"div.detail-content img\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/crawl/cafebiz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"crawl",
+						"cafebiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crawl/vneconomy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number_page_query\": 2,\r\n    \"article_url_query\": \"article.story.story--featured.story--timeline header a\",\r\n    \"title_query\":\"article.detail-wrap header h1\",\r\n    \"timeCreatePostOrigin_query\": \"article.detail-wrap header div.detail__meta\",\r\n    \"category_query\": \"h1.category-main a\",\r\n    \"author_query\": \"div.detail__author strong\",\r\n    \"content_title_query\": \"h2.detail__summary\",\r\n    \"content_des_query\": \"div.detail__content\",\r\n    \"content_html_title_query\":\"h2.detail__summary\",\r\n    \"content_html_des_query\":\"div.detail__content\",\r\n    \"image_url_query\":\"figure.detail__avatar img\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/crawl/vneconomy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"crawl",
+						"vneconomy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

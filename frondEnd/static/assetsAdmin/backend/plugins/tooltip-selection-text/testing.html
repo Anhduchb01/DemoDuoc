@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>TextTip Library Examples</title>
+	<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script src="TextTip.js"></script>
+	<link rel="stylesheet" href="TextTip.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<style>
+		body { font-family: 'Raleway'; background:linear-gradient(135deg, rgb(16, 52, 222) 0%, rgb(16, 52, 222) 6%,rgb(41, 77, 223) 6%, rgb(41, 77, 223) 18%,rgb(67, 103, 224) 18%, rgb(67, 103, 224) 30%,rgb(92, 128, 225) 30%, rgb(92, 128, 225) 31%,rgb(117, 153, 227) 31%, rgb(117, 153, 227) 37%,rgb(142, 178, 228) 37%, rgb(142, 178, 228) 41%,rgb(168, 204, 229) 41%, rgb(168, 204, 229) 69%,rgb(193, 229, 230) 69%, rgb(193, 229, 230) 100%); min-height:100vh; line-height: 1.7;}
+		main {
+			max-width: 700px;
+			margin: 150px auto;
+		}
+
+		section {
+			margin: 4em 0;
+		}
+
+		small {
+			font-size: .65em;
+		}
+	</style>
+</head>
+<body><div id="css-script-menu">
+  <div class="css-script-center">
+    <ul>
+      <li><a href="https://www.cssscript.com/tooltip-text-selection-texttip/">Download</a></li>
+      <li><a href="https://www.cssscript.com/">Back To CSS Script</a></li>
+    </ul>
+    <div class="css-script-ads">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- CSSScript Demo Page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="3025259193"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+    <div class="css-script-clear"></div>
+  </div>
+</div>
+	<main>
+		<h1>TextTip Library Examples</h1>
+		<p><img src="img/logo.svg" width="200"></p>
+
+
+		<section class="scope-three">
+			<h2>Web Font Icons</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit id temporibus dolorum soluta laboriosam, repellat ipsam facere cumque consequatur. Eos et libero sapiente mollitia accusantium impedit commodi incidunt, accusamus esse.</p>
+			<script>
+				const tip3 = new TextTip({
+					scope: '.scope-three',
+					iconFormat: 'font',
+					buttons: [
+						{title: 'Copy and paste', icon: 'far fa-copy', callback: console.log},
+						{title: 'Share', icon: 'far fa-share-square', callback: console.log},
+						{title: 'Favourite', icon: 'far fa-heart', callback: console.log},
+						{title: 'Like', icon: 'far fa-thumbs-up', callback: console.log}
+					]
+				});
+			</script>
+		</section>
+
+		<section class="scope-four">
+			<h2>Show / Hide callbacks</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit id temporibus dolorum soluta laboriosam, repellat ipsam facere cumque consequatur. Eos et libero sapiente mollitia accusantium impedit commodi incidunt, accusamus esse.</p>
+			<script>
+				const tip4 = new TextTip({
+					scope: '.scope-four',
+					iconFormat: 'font',
+					buttons: [
+						{title: 'Favourite', icon: 'far fa-heart', callback: console.log}
+					],
+					on: {
+						show: () => console.log('show'),
+						hide: () => console.log('hide')
+					}
+				});
+			</script>
+		</section>
+	</main>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

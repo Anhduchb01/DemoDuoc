@@ -1,0 +1,80 @@
+.see-more-notify{
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    display: flex;
+    border-top: 1px solid #ebedf2;
+    font-size: 13px;                  
+    padding-top: 8px;
+    font-weight: bold;
+  }
+.switch.s-outline-info {
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.title-address-page,
+.sub-title-address-page {
+    color: #888ea8;
+    margin: 0;
+}
+
+.td-content.name-page {
+    display: flex;
+    flex-flow: column;
+}
+
+td .td-content {
+    cursor: default !important;
+}
+
+.td-content.name-page a {
+    color: #888ea8;
+}
+
+tr:hover .td-content.name-page a {
+    color: #b7c1cc;
+}
+
+.title-page {
+    font-size: 15px;
+}
+
+.td-content.name-page span {
+    padding-left: 15px;
+}
+
+.box-switch {
+    text-align: center;
+}
+
+.box-switch {
+    text-align: center;
+}
+
+.data-log {
+    display: flex;
+    flex-flow: column;
+}
+
+.checkbox-column.sorting_1 {
+    padding-left: 15px !important;
+}
+
+/* .new-control.new-checkbox.checkbox-outline-primary.m-auto {
+    width: 17px;
+} */
+
+.td-content.text-left {
+    margin: 0px !important;
+    width: 100%;
+    padding-left: 15px !important;
+}
+.table-schedule td{
+    padding-top: 2px  !important;
+    padding-bottom: 1px  !important;
+}
+.nav-link.sub-nav-link{white-space: nowrap;}
+.table-responsive{overflow-x: hidden !important ;}
+.table-list-key th ,.table-list-key td{border: 1px 1px 1px 1px;border: 1px solid #bfc9d4 !important;}
+.chart-circle{border-bottom: 1px dashed #e0e6ed;padding:  20px 20px 20px 20px !important;margin: 0px !important; }

@@ -1,0 +1,54 @@
+07-08-2021:10-10-41-[ERROR]-Page GSJ :TimeoutError: Navigation timeout of 1000 ms exceeded
+07-08-2021:10-10-43-[ERROR]-Page GSJ :TimeoutError: Navigation timeout of 1000 ms exceeded
+07-08-2021:10-10-44-[ERROR]-Page GSJ :TimeoutError: Navigation timeout of 1000 ms exceeded
+07-08-2021:10-10-45-[ERROR]-Page GSJ :TimeoutError: Navigation timeout of 1000 ms exceeded
+07-08-2021:10-00-00-[ERROR]-Page GSJ :TypeError: Cannot read property 'timeDelayCrawl' of undefined
+07-08-2021:10-00-01-[ERROR]-Page ENV :TimeoutError: Navigation timeout of 1000 ms exceeded
+07-08-2021:10-00-02-[ERROR]-Page ENV :TimeoutError: Navigation timeout of 1000 ms exceeded
+07-08-2021:10-00-03-[ERROR]-Page ENV :TimeoutError: Navigation timeout of 1000 ms exceeded
+07-08-2021:10-00-05-[ERROR]-Page ENV :TimeoutError: Navigation timeout of 1000 ms exceeded
+<<<<<<< HEAD
+<<<<<<< HEAD
+07-16-2021:11-06-52-[ERROR]-Page COB :Error: Loading script from https://code.jquery.com/jquery-3.2.1.min.js failed
+=======
+=======
+>>>>>>> e6c1fa5ff7a670b245b683c41dfadf07af322eff
+09-01-2021:11-35-28-[ERROR]-Page GSJ :Error: net::ERR_ABORTED at site::https://www.gsj.jp water
+09-01-2021:11-36-50-[ERROR]-Page GSJ :Error: net::ERR_ABORTED at site::https://www.gsj.jp water
+09-01-2021:11-38-14-[ERROR]-Page GSJ :Error: net::ERR_ABORTED at site::https://www.gsj.jp water
+09-01-2021:11-38-22-[ERROR]-Page GSJ :Error: net::ERR_ABORTED at site::https://www.gsj.jp water
+09-01-2021:11-39-05-[ERROR]-Page GSJ :Error: Protocol error (Page.navigate): Cannot navigate to invalid URL
+09-01-2021:11-40-11-[ERROR]-Page GSJ :Error: Navigation failed because browser has disconnected!
+09-01-2021:11-48-05-[ERROR]-Page GSJ :Error: Navigation failed because browser has disconnected!
+<<<<<<< HEAD
+>>>>>>> e6c1fa5ff7a670b245b683c41dfadf07af322eff
+=======
+>>>>>>> e6c1fa5ff7a670b245b683c41dfadf07af322eff
+09-22-2021:02-25-36-[ERROR]-Page COB :Error: Protocol error (Network.setUserAgentOverride): Invalid parameters Failed to deserialize params.userAgent - BINDINGS: mandatory field missing at position 7
+09-22-2021:02-25-41-[ERROR]-Page COB :Error: Protocol error (Network.setUserAgentOverride): Invalid parameters Failed to deserialize params.userAgent - BINDINGS: mandatory field missing at position 7
+09-22-2021:02-26-20-[ERROR]-Page ENV :Error: Protocol error (Network.setUserAgentOverride): Invalid parameters Failed to deserialize params.userAgent - BINDINGS: mandatory field missing at position 7
+09-22-2021:02-26-22-[ERROR]-Page COB :Error: Protocol error (Network.setUserAgentOverride): Invalid parameters Failed to deserialize params.userAgent - BINDINGS: mandatory field missing at position 7
+09-22-2021:02-26-23-[ERROR]-Page NASA :Error: Protocol error (Network.setUserAgentOverride): Invalid parameters Failed to deserialize params.userAgent - BINDINGS: mandatory field missing at position 7
+09-22-2021:02-26-27-[ERROR]-Page NASA :Error: Protocol error (Network.setUserAgentOverride): Invalid parameters Failed to deserialize params.userAgent - BINDINGS: mandatory field missing at position 7
+09-28-2021:02-25-54-[ERROR]-Page ENV :Error: Execution context was destroyed, most likely because of a navigation.
+09-26-2022:10-36-07-[ERROR]-Page ENV :TimeoutError: waiting for selector `div[id=search_box]` failed: timeout 30000ms exceeded
+09-26-2022:10-52-04-[ERROR]-Page ENV :Error: Error: failed to find element matching selector "input[class=c-header__menu__search__button]"
+09-26-2022:11-01-35-[ERROR]-Page ENV :Error: Evaluation failed: TypeError: Cannot read property 'value' of null
+    at __puppeteer_evaluation_script__:2:69
+09-26-2022:11-13-05-[ERROR]-Page ENV :Error: Evaluation failed: TypeError: Cannot read property 'innerText' of null
+    at __puppeteer_evaluation_script__:2:93
+09-26-2022:11-16-27-[ERROR]-Page ENV :Error: Evaluation failed: TypeError: Cannot read property 'innerHTML' of null
+    at __puppeteer_evaluation_script__:2:93
+09-26-2022:03-58-57-[ERROR]-Page GSJ :Error: Evaluation failed: TypeError: Cannot read property 'innerText' of undefined
+    at __puppeteer_evaluation_script__:6:15
+    at Function.from (<anonymous>)
+    at __puppeteer_evaluation_script__:2:15
+09-26-2022:04-28-21-[ERROR]-Page GSJ :Error: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+09-26-2022:04-30-00-[ERROR]-Page GSJ :Error: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+09-26-2022:04-30-30-[ERROR]-Page GSJ :Error: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+09-26-2022:04-30-32-[ERROR]-Page GSJ :Error: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+09-26-2022:05-16-05-[ERROR]-Page ENV :TimeoutError: waiting for selector `div[id=search_box]` failed: timeout 30000ms exceeded
+09-26-2022:05-23-45-[ERROR]-Page ENV :TypeError: console is not a function
+09-30-2022:01-10-33-[ERROR]-Page ENV :TypeError: Cannot read properties of undefined (reading 'replace')
+09-30-2022:01-14-47-[ERROR]-Page ENV :TypeError: Cannot read properties of undefined (reading 'toString')
+09-30-2022:01-17-28-[ERROR]-Page ENV :TypeError: Cannot read properties of undefined (reading 'toString')

@@ -1,0 +1,7 @@
+.listArticle > .vm--modal ,
+.Show-Article > .vm--modal{
+  top: 0px!important;
+  left: 0px!important;
+  width: 100%!important;
+  height: 0px!important;
+}

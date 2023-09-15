@@ -1,0 +1,29 @@
+/* BG-color Badges */
+body.dark .color-badge-success {
+  background-color: #009688;
+  color: #ddf5f0;
+}
+body.dark .color-badge-danger {
+  color: #fff5f5;
+  background-color: #e7515a;
+}
+body.dark .color-badge-primary {
+  color: #eaf1ff;
+  background: #4361ee;
+}
+body.dark .color-badge-warning {
+  color: #fff9ed;
+  background-color: #e2a03f;
+}
+body.dark .color-badge-info {
+  background-color: #2196f3;
+  color: #e7f7ff;
+}
+body.dark .color-badge-dark {
+  color: #ebedf2;
+  background-color: #515365;
+}
+body.dark .color-badge-secondary {
+  background-color: #805dca;
+  color: #f3effc;
+}

@@ -1,0 +1,154 @@
+.sorting-component .news-item {
+        margin-bottom: 30px;
+}
+
+.sorting-component .news-item--small {
+        -webkit-clip-path: polygon(91% 0, 100% 5%, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(91% 0, 100% 5%, 100% 100%, 0 100%, 0 0);
+}
+
+.sorting-component .news-item--style-1 .news-item__img {
+        position: relative;
+        background: rgba(0, 61, 144, .15);
+}
+
+.sorting-component .img--bg {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 160px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: top center;
+        object-position: top center;
+        z-index: -1;
+}
+
+.sorting-component img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+}
+
+.sorting-component .news-item__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 250px;
+        background: #f3f6f5 !important;
+}
+
+.sorting-component .news-item__content {
+        padding: 24px 30px 25px 30px;
+}
+
+.sorting-component .box-title-des {
+        height: 160px;
+        overflow: hidden;
+}
+
+.sorting-component .news-item__title {
+        height: 40px;
+        max-height: 80px;
+        overflow: hidden;
+        line-height: 20px !important;
+        font-weight: 700;
+}
+
+.sorting-component .news-item__title a:hover {
+        color: #00997d !important
+}
+
+.sorting-component .news-item__details {
+        margin-top: 0px !important;
+}
+
+.sorting-component .news-item--style-1 .news-item__details {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        color: #767f7f;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 20px;
+}
+
+.sorting-component .irs {
+        flex-grow: 1;
+}
+
+.sorting-component .irs-min,
+.irs-max {
+        display: none;
+}
+
+.sorting-component .irs--big .irs-bar,
+.irs-single {
+        background-color: rgb(0, 143, 251);
+        border: rgb(0, 143, 251);
+        background: rgb(0, 143, 251);
+        box-shadow: none;
+}
+
+.sorting-component .irs-handle {
+        top: 28px !important;
+        width: 20px !important;
+        height: 20px !important;
+}
+
+.sorting-component .irs--big .irs-line {
+        background: #79db72;
+        background-color: #79db72;
+        border: #79db72;
+        background: #79db72
+}
+
+.sorting-component input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}
+
+.sorting-component .loading-overlay {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255 255 255 / 50%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+}
+
+.sorting-component .loading-overlay .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 18px;
+        color: #79db72;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+}
+
+.sorting-component .widget-account-invoice-three .widget-content .bills-stats span:before {
+        display: none;
+}
+
+.sorting-component .widget-account-invoice-three .widget-content .bills-stats span {
+        padding-left: 10px;
+}
+
+.sorting-component .input-config-sorting {
+        font-weight: 700;
+        outline: none;
+        background: transparent;
+        width: 37px;
+        padding: 0px;
+        border: 0px;
+        text-align: right;
+        box-shadow: none;
+}
