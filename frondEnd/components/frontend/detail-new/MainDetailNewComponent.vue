@@ -37,7 +37,10 @@
                   <span style="padding: 0px 20px 0px 5px;font-size: 14px;font-weight: 600;" id="name-source-article">{{results.urlPageCrawl}}</span>
                 </div>
               </div>
-            </div>        
+            </div>
+            <div id="title-post" class="col-12">
+              <h6>{{ results.title }}</h6>
+            </div>         
             <div id="content-post" class="col-12">
               <div class="content-post" v-html="results.content_html">
               </div>

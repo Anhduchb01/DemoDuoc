@@ -622,7 +622,7 @@ export default {
         query: {
           archive: this.archive,
           category: this.typeViewArticle,
-          key: this.key,
+          key: this.searchKeywordPost,
           page: this.page,  
           type: this.category
         },
