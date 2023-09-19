@@ -108,7 +108,6 @@ async function getArticleHasTag(text, numberPage) {
 
 
 async function getStatisticTag(text) {
-
 	var regex = new RegExp('^' + text + '$', 'i');
 	var tags = await Tag.find({ "name": { $regex: regex } });
 	var tagIds = tags.map(tag => tag._id);
@@ -198,8 +197,6 @@ async function getStatisticTag(text) {
 	arrSource = urlPageCounts
 	const urls = Object.keys(urlPageCounts);
 	const counts = Object.values(urlPageCounts);
-
-
 	return { totalPost: totalPost, percentPOS: percentPOS, percentNEG: percentNEG, percentNEU: percentNEU, urls: urls,counts:counts }
 }
 async function getTimeLineOfTag(text) {

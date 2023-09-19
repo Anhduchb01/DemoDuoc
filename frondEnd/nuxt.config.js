@@ -182,8 +182,8 @@ module.exports = {
           },
           "body": {
             "home": {
-              "firstdesHeader" :"Vietnamese Financial News Analysis",
-              "desHeader": "Finance at your fingertips with FINSIGHT.",
+              "firstdesHeader" :"Vietnamese Pharmaceutical News Analysis",
+              "desHeader": "News at your fingertips with FINSIGHT.",
               "new": "NEWS",
               "featured": "Featured",
               "News": "News",
@@ -202,7 +202,7 @@ module.exports = {
               "desServices3": "You can run surface water flow simulation with TeTTo application any where.",
               "launch": "Launch",
               "desServices1":"Ease to Track",
-              "desServices2":"Analytics Financial News",
+              "desServices2":"Analytics Pharmaceutical News",
               "desServices3":"You can see overall analysis and key word analysis.",
               "bigData": "Big Data",
               "sentiment" :"Sentiment Analysis",
@@ -319,8 +319,8 @@ module.exports = {
           },
           "body": {
             "home": {
-              "firstdesHeader" :'Phân tích tin tức tài chính',
-              "desHeader":"Tài chính trong tầm tay với FINSIGHT",
+              "firstdesHeader" :'Phân tích tin tức Dược phẩm',
+              "desHeader":"Tin tức trong tầm tay với FINSIGHT",
               "new": "new",
               "featured": "featured",
               "News": "News",
@@ -333,7 +333,7 @@ module.exports = {
               "viewAll": "Xem Thêm",
               "services1": "services1",
               "desServices1":"Dễ Dàng Theo Dõi",
-              "desServices2":"Phân tích tin tức tài chính",
+              "desServices2":"Phân tích tin tức Dược phẩm",
               "desServices3":"Bạn có thể xem phân tích chung về thị trường và cho tên công ty, tên người",
               "bigData": "Dữ liệu lớn",
               "sentiment" :"Phân tích cảm xúc",

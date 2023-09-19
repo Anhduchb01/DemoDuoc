@@ -74,7 +74,7 @@ router.get("/get-statistic-tag", async (req, res) => {
   try {
     let text = req.query.text;
     if (text == "" || text == null || text == undefined) {
-      let articles = {totalPost:0,percentPOS:0,numberNEU:0,numberNEG:0,arrSource:[]}
+      let articles = {totalPost:0,percentPOS:0,numberNEU:0,numberNEG:0,urls: [],counts:[]}
       return res.send(articles)
     } else {
       if (myCache.has("get-statistic-tag-" + String(text))) {

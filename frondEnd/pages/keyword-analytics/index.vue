@@ -47,8 +47,11 @@
 
 		<div class="container" style="padding-top: 60px;">
 			<b-row class="match-height ">
-			<b-col md="6" class="analysis-chart" >
-				<BarChart v-if="arrSource.length > 0" :arrSource="arrSource" :categoriesSource="categoriesSource"/>
+			<b-col  md="6" class="analysis-chart" >
+        <!-- {{ arrSourceChart }}
+        {{ categoriesChart }} -->
+
+				<BarChart v-if="arrSource.length > 0 && categoriesSource.length >0" :arrSource="arrSource" :categoriesSource="categoriesSource"/>
 			</b-col>
 			<b-col md="6" class="analysis-chart" >
 				<DonutChart v-if="totalPost > 0" :totalPost="totalPost" :numberPOS="numberPOS" :numberNEG="numberNEG" :numberNEU="numberNEU" /></b-col>
@@ -329,6 +332,7 @@ export default {
 		totalNews: function () {
 			return Math.ceil(this.totalPost / 8);
 		},
+    
 	},
 	methods: {
 		getHostName(value) {
