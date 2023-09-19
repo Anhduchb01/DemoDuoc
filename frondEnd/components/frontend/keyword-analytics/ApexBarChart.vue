@@ -42,7 +42,7 @@ import {
 } from 'bootstrap-vue'
 export default {
 	props: [
-		"arrSource",
+		"arrSource","categoriesSource"
 	],
 	components: {
 		BCard,
@@ -70,7 +70,7 @@ export default {
 					plotOptions: {
 						bar: {
 							horizontal: true,
-							barHeight: '30%',
+							barHeight: '100%',
 							endingShape: 'rounded',
 
 						},
@@ -86,7 +86,7 @@ export default {
 						enabled: true,
 					},
 					xaxis: {
-						categories: ['CafeF', 'CafeBiz', 'Báo Đầu Tư', 'VnEconomy'],
+						categories: this.categoriesSource,
 					},
 					yaxis: {
 						// opposite: isRtl,

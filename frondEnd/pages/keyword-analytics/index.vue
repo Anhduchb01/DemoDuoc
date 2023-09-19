@@ -48,13 +48,13 @@
 		<div class="container" style="padding-top: 60px;">
 			<b-row class="match-height ">
 			<b-col md="6" class="analysis-chart" >
-				<BarChart v-if="arrSource.length > 0" :arrSource="arrSource"/>
+				<BarChart v-if="arrSource.length > 0" :arrSource="arrSource" :categoriesSource="categoriesSource"/>
 			</b-col>
 			<b-col md="6" class="analysis-chart" >
 				<DonutChart v-if="totalPost > 0" :totalPost="totalPost" :numberPOS="numberPOS" :numberNEG="numberNEG" :numberNEU="numberNEU" /></b-col>
 		</b-row >
 		</div>
-			<LineChart v-if="arrArticle.length > 0" :resultTimeline="resultTimeline"/>
+			<!-- <LineChart v-if="arrArticle.length > 0" :resultTimeline="resultTimeline"/> -->
       <div class="col-12 p-0">
       <div id="overlay">
         <div id="text">
@@ -310,6 +310,7 @@ export default {
 			numberNEU: 0,
 			numberNEG: 0,
 			arrSource: [],
+      categoriesSource: [],
 			arrArticle: [],
 			boxAlertEmpty: true,
 			loading :false,
@@ -317,7 +318,7 @@ export default {
 	},
 	mounted() {
 		this.getStatisticTag()
-		this.getTimelineOfTag()
+		// this.getTimelineOfTag()
 		this.getArticleHasTag(this.page)
 
 	},
@@ -409,7 +410,7 @@ export default {
 				},
 			});
 			this.getStatisticTag()
-			this.getTimelineOfTag()
+			// this.getTimelineOfTag()
 			this.getArticleHasTag(this.page);
 		},
 		searchDataPost() {
@@ -467,7 +468,8 @@ export default {
 						this.numberPOS = response.data.percentPOS
 						this.numberNEU = response.data.percentNEU
 						this.numberNEG = response.data.percentNEG
-						this.arrSource = response.data.arrSource 
+						this.arrSource = response.data.counts 
+            this.categoriesSource = response.data.urls
 					})
 					.catch((e) => {
 						this.errors.push(e);

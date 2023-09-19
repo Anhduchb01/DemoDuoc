@@ -25,9 +25,9 @@ client = MongoClient(DB_URL)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 current_path = Path(__file__).parent.parent.joinpath('ai_model')
 # client = MongoClient("mongodb://crawl02:crawl02123@localhost:27017/?authSource=FinSight")
-historyClassification_collection = client["FinSight"]["historyclassifications"]
-article_collection = client["FinSight"]["posts"]
-
+historyClassification_collection = client["Duoc"]["historyclassifications"]
+article_collection = client["Duoc"]["posts"]
+model_collection = client["Duoc"]["models"]
 def ckeck_database_classification_service():
 	ckeck_database_article_repository()
 	global historyClassification_collection

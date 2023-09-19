@@ -12,8 +12,8 @@
       <section style="padding: 60px 0px" class="section catalog" id="section-box-news">
         <div class="container">
           <h4>{{ $t("body.keyword.OverallAnalytics") }}</h4>
-          <BoxTimePlayer />
-          <OverallAnalytics />
+          <!-- <BoxTimePlayer /> -->
+          <!-- <OverallAnalytics /> -->
           <div class="box-chart-analysis">
             <div style="width: 70%; margin-right: 10px">
               <WordCloud />

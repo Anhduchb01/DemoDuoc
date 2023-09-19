@@ -14,9 +14,4 @@ app.config['QUEUES'] = ["default"]
 app.register_blueprint(crawler)
 app.register_blueprint(nlp)
 if __name__ == '__main__':    
-	redis_url = app.config["REDIS_URL"]
-	redis_connection = redis.Redis(host="localhost",port=6379)
-	with Connection(redis_connection):
-		worker = Worker(app.config["QUEUES"])
-		worker.work()  
 	app.run(debug=True)

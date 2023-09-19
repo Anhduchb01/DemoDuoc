@@ -41,7 +41,6 @@ def generate_keyword_default(sequence, ner):
     for i in output:
         
         keyword = __remove_stop_word(i['word'])
-        
         if (keyword):
             if i['entity_group'] =='PERSON':
                 keywords.append({'name': keyword, 'type': "PER", 'score': i['score']})
@@ -108,25 +107,19 @@ def generate_keyword(sequence,  tokenizer, model):
 def split_sentence(text):
     ''' Split big sentences to small sentences. Max sentences < 300 word '''
     text_process = []
-    text = __remove_special_character(text)
-    text_split_new_line = text.split('\n')
     text_split_by_dot = []
-    for t in text_split_new_line:
-        if (len(t.split()) > 100):
-            text_split = t.split('.')
-            text_split_by_dot += text_split
-        else:
-            text_split_by_dot.append(t)
+    text_split_by_dot = text.split('.')
+    for i in range(len(text_split_by_dot)):
+        if (i < len(text_split_by_dot)-1):
+            text_split_by_dot[i] = text_split_by_dot[i] + '.'
     join_text = ''
     for t in text_split_by_dot:
-        if (len(t.split(' ')) > 5):
-            if ((len(join_text.split(' ')) + len(t.split(' '))) < 100):
-                join_text += t
-                
-            else:
-                text_process.append(join_text)
-                join_text = ''
-    if (join_text):
+        if (len(join_text.split(' ')) + len(t.split(' '))) > 200:
+            text_process.append(join_text)
+            join_text = t
+        else:
+            join_text += t 
+    if len(join_text)>0:
         text_process.append(join_text)
     return text_process
 def split_sentence_create(text):
@@ -145,6 +138,7 @@ def __remove_special_character(text):
     text = text.replace(":", " ")
     text = text.replace("'"," ")
     text = text.replace('"'," ")
+    text = text.strip()
     return text
 import re
 def __remove_special_character1(text):
@@ -173,6 +167,8 @@ def __remove_special_character1(text):
 
 def __remove_stop_word(tag):
     ''' Remove stop word '''
+    tag = tag.strip()
+    tag = tag.title()
     if ',' in tag:
         return None
     if (not tag[-1].isalpha()) and (not tag[-1].isnumeric()):
@@ -190,8 +186,5 @@ def __remove_stop_word(tag):
     txt1 = txt1.replace(" ","")
     if txt1.isnumeric():
         return None
-    tag = tag.replace("and","")
-    tag = tag.replace("for","")
-    tag = tag.replace("of","")
 
     return tag
