@@ -1,0 +1,17 @@
+
+> finsight@1.0.0 dev
+> nuxt
+
+
+ WARN  sass-loader@12.6.0 is installed but ^10.1.1 is expected
+
+ℹ Listening on: http://localhost:3000/
+ℹ Preparing project for development
+ℹ Initial build may take a while
+✔ Builder initialized
+✔ Nuxt files generated
+ℹ Compiling Client
+✔ Client: Compiled successfully in 2.01m
+ℹ Waiting for file changes
+ℹ Memory usage: 559 MB (RSS: 1.11 GB)
+ℹ Listening on: http://localhost:3000/
