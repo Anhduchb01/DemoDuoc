@@ -167,9 +167,11 @@ async function getStatisticTag(text) {
 	let numberBaoDauTu = 0
 	let numberVneconomy = 0
 	let arrSource = []
+	const urlPageCounts = {};
 	for (let i = 0; i < articles.length; i++) {
 
 		let article = articles[i]
+		const url = article.urlPageCrawl;
 		if (article.category == 'POS') {
 			numberPOS += 1
 		} else if (article.category == 'NEG') {
@@ -177,29 +179,28 @@ async function getStatisticTag(text) {
 		} else {
 			numberNEU += 1
 		}
-		if (article.urlPageCrawl == 'cafef') {
-			numberCafef += 1
-		} else if (article.urlPageCrawl == 'cafebiz') {
-			numberCafebiz += 1
-		} else if (article.urlPageCrawl == 'vneconomy') {
-			numberVneconomy += 1
-		} else if (article.urlPageCrawl == 'baodautu') {
-			numberBaoDauTu += 1
-		}
+		if (url in urlPageCounts) {
+			urlPageCounts[url]++;
+		  } else {
+			urlPageCounts[url] = 1;
+		  }
 
 	}
 
 	let percentPOS = Math.round(numberPOS / totalPost * 100)
 	let percentNEU = Math.round(numberNEU / totalPost * 100)
 	let percentNEG = Math.round(numberNEG / totalPost * 100)
-	if (numberCafef == 0 && numberCafebiz == 0 && numberBaoDauTu == 0 && numberVneconomy == 0) {
-		arrSource = []
-	} else {
-		arrSource.push(numberCafef, numberCafebiz, numberBaoDauTu, numberVneconomy)
-	}
+	// if (numberCafef == 0 && numberCafebiz == 0 && numberBaoDauTu == 0 && numberVneconomy == 0) {
+	// 	arrSource = []
+	// } else {
+	// 	arrSource.push(numberCafef, numberCafebiz, numberBaoDauTu, numberVneconomy)
+	// }
+	arrSource = urlPageCounts
+	const urls = Object.keys(urlPageCounts);
+	const counts = Object.values(urlPageCounts);
 
 
-	return { totalPost: totalPost, percentPOS: percentPOS, percentNEG: percentNEG, percentNEU: percentNEU, arrSource: arrSource }
+	return { totalPost: totalPost, percentPOS: percentPOS, percentNEG: percentNEG, percentNEU: percentNEU, urls: urls,counts:counts }
 }
 async function getTimeLineOfTag(text) {
 

@@ -16,10 +16,10 @@ async function generateWordCloud(time) {
         last_year = time + '/01'
     }
     const countTable = await Tagmap.aggregate([
-        { "$match": { "$and": [
-            { "year": { "$lt": year } },
-            { "year": { "$gt": last_year } }
-          ] } },
+        // { "$match": { "$and": [
+        //     { "year": { "$lt": year } },
+        //     { "year": { "$gt": last_year } }
+        //   ] } },
         
         { "$lookup": { from: "tags", localField: "tag_id", foreignField: "_id", as: "tags" } },
         {
@@ -90,10 +90,10 @@ async function generateDataByYear(time) {
     }
     
     const result = await Tagmap.aggregate([
-        { "$match": { "$and": [
-            { "year": { "$lt": year } },
-            { "year": { "$gt": last_year } }
-          ] } },
+        // { "$match": { "$and": [
+        //     { "year": { "$lt": year } },
+        //     { "year": { "$gt": last_year } }
+        //   ] } },
         { "$lookup": { from: "tags", localField: "tag_id", foreignField: "_id", as: "tags" } },
         {
             $unwind: {
@@ -159,7 +159,7 @@ async function countTotalTagAllYear() {
     let arrResult = []
     let year = '2023/12/31'
     const arrayTagLib = await Tagmap.aggregate([
-        { "$match": { year: { "$lt": year } } },
+        // { "$match": { year: { "$lt": year } } },
         { "$lookup": { from: "tags", localField: "tag_id", foreignField: "_id", as: "tags" } },
         {
             $unwind: {
@@ -223,7 +223,7 @@ async function countTotalTagAllYear() {
         }, { "$sort": { "_id": 1 } },
     ]);
     const arrayTagAI = await Tagmap.aggregate([
-        { "$match": { year: { "$lt": year } } },
+        // { "$match": { year: { "$lt": year } } },
         { "$lookup": { from: "tags", localField: "tag_id", foreignField: "_id", as: "tags" } },
         {
             $unwind: {
@@ -296,10 +296,10 @@ async function countTopTag(time) {
             last_year = time + '/01'
         }
         const result = await Tagmap.aggregate([
-            { "$match": { "$and": [
-                { "year": { "$lt": year } },
-                { "year": { "$gt": last_year } }
-              ] } },
+            // { "$match": { "$and": [
+            //     { "year": { "$lt": year } },
+            //     { "year": { "$gt": last_year } }
+            //   ] } },
             { "$lookup": { from: "tags", localField: "tag_id", foreignField: "_id", as: "tags" } },
             {
                 $unwind: {
@@ -359,7 +359,7 @@ async function countTagByCategoryAllYear() {
     let arrResult
     let year = '2023/12/31'
     const resultLib = await Tagmap.aggregate([
-        { "$match": { year: { "$lt": year } } },
+        // { "$match": { year: { "$lt": year } } },
         { "$lookup": { from: "tags", localField: "tag_id", foreignField: "_id", as: "tags" } },
         {
             $unwind: {

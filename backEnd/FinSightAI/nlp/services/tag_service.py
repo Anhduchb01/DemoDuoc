@@ -34,12 +34,12 @@ client = MongoClient(DB_URL)
 
 # client = MongoClient("mongodb://crawl02:crawl02123@localhost:27017/?authSource=FinSight")
 
-tags_collection = client["FinSight"]["tags"]
-tagmap_collection = client["FinSight"]["tagmaps"]
-model_collection = client["FinSight"]["models"]
-historyGenerateTag_collection = client["FinSight"]["historygeneratetags"]
-article_collection = client["FinSight"]["posts"]
-historyTag_collection = client["FinSight"]["taghistorys"]
+tags_collection = client["Duoc"]["tags"]
+tagmap_collection = client["Duoc"]["tagmaps"]
+model_collection = client["Duoc"]["models"]
+historyGenerateTag_collection = client["Duoc"]["historygeneratetags"]
+article_collection = client["Duoc"]["posts"]
+historyTag_collection = client["Duoc"]["taghistorys"]
 
 def ckeck_database_tag_service(page):
 	ckeck_database_article_repository()
@@ -50,12 +50,12 @@ def ckeck_database_tag_service(page):
 	global article_collection
 	global historyTag_collection
 	
-	tags_collection = client["FinSight"]["tags"]
-	tagmap_collection = client["FinSight"]["tagmaps"]
-	model_collection = client["FinSight"]["models"]
-	historyGenerateTag_collection = client["FinSight"]["historygeneratetags"]
-	article_collection = client["FinSight"]["posts"]
-	historyTag_collection = client["FinSight"]["taghistorys"]
+	tags_collection = client["Duoc"]["tags"]
+	tagmap_collection = client["Duoc"]["tagmaps"]
+	model_collection = client["Duoc"]["models"]
+	historyGenerateTag_collection = client["Duoc"]["historygeneratetags"]
+	article_collection = client["Duoc"]["posts"]
+	historyTag_collection = client["Duoc"]["taghistorys"]
 
 
 def predict_tag_lib(text):
@@ -284,7 +284,9 @@ def process_tag_ai(id,timeModel):
 			listArticleHasProcessed = historyGenerateTag_collection.find_one({"model_id": str(id)})
 			arrayArticleHasProcessed = listArticleHasProcessed['listArticleHasProcessed']
 			print('load model default -ok')
-			cursor  =article_collection.find({'status':"0"},no_cursor_timeout=True).batch_size(20)
+			count_article = article_collection.count_documents({})
+			print('Number of Article',count_article)
+			cursor  =article_collection.find({},no_cursor_timeout=True).batch_size(20)
 			for article in tqdm(cursor):
 				flagArticle = True
 				for articleHasProcessed in arrayArticleHasProcessed:
@@ -294,10 +296,9 @@ def process_tag_ai(id,timeModel):
 				if flagArticle == False:
 					continue
 				if article:
-					
 					text = article["content"]
 					if text == None or text == '':
-						break
+						continue
 					year = get_time_article(article)
 					if text != None or text != '':
 						# split big sentences to small sentences. 
@@ -393,7 +394,7 @@ def process_tag_ai(id,timeModel):
 			model = initialization_model(id)
 			tokenizer = AutoTokenizer.from_pretrained(current_path.joinpath('ner-default'))
 			print('load model - ok')
-			cursor  =article_collection.find({'status':"0"},no_cursor_timeout=True).batch_size(20)
+			cursor  =article_collection.find({},no_cursor_timeout=True).batch_size(20)
 			for article in tqdm(cursor):
 				if len(arrayArticleHasProcessed) != 0:
 					flagArticle = True
